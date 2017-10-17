@@ -1,0 +1,229 @@
+a:link {
+	color: darkblue;
+}
+a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+a:active {
+	color: red;
+}
+
+body {
+	background-color: #E3E9ED;
+	font-family: Calibri, Helvetica, Arial, sans-serif;
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-top: 0;
+}
+
+#buttons {
+	margin: 0.5em;
+}
+
+#errors, div.errors {
+	background-color: mistyrose;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+}
+
+#errors, .errors, #notices, .notices, #options {
+	border-radius: 8px;
+}
+
+#errors.noerrors, div.errors.noerrors {
+	background-color: #dfffdf;
+}
+
+#errors p, .errors p {
+	margin-left: 2em;
+}
+
+#errors p.evidence, .errors p.evidence {
+	font-family: monospace;
+	margin-left: 0em;
+	white-space: pre;
+}
+
+.explanation {
+	font-style: italic;
+	margin-bottom: 1.5em;
+	margin-left: 0em;
+	margin-top: 0.25em;
+}
+
+fieldset {
+	/* background-color: gainsboro; */
+	/* border: 2px solid black; */
+	border: 1px solid gray;
+	color: black;
+	margin: 1em;
+	padding: 8px;
+	text-align: left;
+}
+
+#functions {
+	background-color: white;
+	border: 1px solid gray;
+	margin: 1em; 
+	padding: 1em;
+}
+
+#functions {
+	font-family: monospace;
+	/*display: none;
+	visibility: hidden;*/
+}
+
+#functions div {
+	margin-left: 10em;
+	text-indent: -5em;
+}
+
+#functions div.function {
+	margin-left: 0em;
+	text-indent: 0em;
+}
+
+#functions h2 {
+	font-family: Calibri, Helvetica, Arial, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+h1 {
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+
+h2 {
+	margin: 0;
+}
+
+i {
+	font-family: Calibri, Helvetica, Arial, sans-serif;
+	font-style: italic;
+}
+
+/*
+input[type=button], button {
+	border: 2px solid black;
+	color: black;
+	background-color: navajowhite;
+}
+
+input[type=button]:hover, button:hover {
+	background-color: lightsteelblue;
+	text-decoration: underline;
+}
+
+input[type=button]:active, button:active {
+	background-color: indianred;
+	text-decoration: none;
+}
+*/
+
+#jslint {
+	background-color: #0064CD;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+  background-image: linear-gradient(top, #049cdb, #0064cd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0);
+  background-repeat: repeat-x;
+	border-top-color: #049CDB;
+	border-left-color: #049CDB;
+	border-right-color: #0064CD;
+	border-bottom-color: #0064CD;
+	border-radius: 8px;
+	border-width: 1px;
+	color: white;
+	font-size: 18pt;
+	/*margin-right: 10px;*/
+	padding: 0.25em 1em;
+}
+
+#jslint:hover {
+	cursor: pointer;
+	background-color: #0084ed;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#04acfb), to(#0084ed));
+  background-image: -moz-linear-gradient(top, #04acfb, #0084ed);
+  background-image: -ms-linear-gradient(top, #04acfb, #0084ed);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #04acfb), color-stop(100%, #0084ed));
+  background-image: -webkit-linear-gradient(top, #04acfb, #0084ed);
+  background-image: -o-linear-gradient(top, #04acfb, #0084ed);
+  background-image: linear-gradient(top, #04acfb, #0084ed);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#04acfb', endColorstr='#0084ed', GradientType=0);
+	border-top-color: #04acfb;
+	border-left-color: #04acfb;
+	border-right-color: #0084ed;
+	border-bottom-color: #0084ed;
+}
+
+legend {
+	background-color: thistle;
+	border: 2px solid black;
+	color: black;
+	padding: 8px;
+}
+
+#notices, div.notices {
+	background-color: #ffffef;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+}
+
+#notices p, .notices p {
+	margin-left: 2em;
+}
+#notices p.evidence, .notices p.evidence {
+	font-family: monospace;
+	margin-left: 0em;
+	white-space: pre;
+}
+
+#options {
+	background-color: #F0F4F0;
+	clear: both;
+	display: inline-block;
+}
+
+#options div {
+	float: left;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+#options a {
+	text-decoration: none;
+}
+
+#output {
+	text-align: left;
+}
+
+p {
+	padding-left: 10pt;
+}
+
+textarea {
+	/*background-color: ghostwhite;*/
+	border: 1px solid gray;
+	border-radius: 3px;
+	font-family: "Consolas", "Courier New", monospace;
+	height: 3in;
+	overflow: auto;
+	padding: 0.5em;
+	width: 100%;
+}
+
+#version {
+	font-size: smaller;
+	margin-top: 0;
+}

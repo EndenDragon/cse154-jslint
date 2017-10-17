@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UW CSE 154 JavaScript Lint Verifier</title>
+		<link href="jslint.css" type="text/css" rel="stylesheet" />
+		<script src="jslint.js"></script>
+	</head>
+	
+	<body>
+		<h1>
+			UW CSE 154 JavaScript Lint
+		</h1>
+		
+		<p id="version">Version: Stepp 2012-12-02 (based on Crockford 2008-04-08)</p>
+
+		
+		<div>
+			<textarea id="input" spellcheck="false" placeholder="Paste your JavaScript code here."></textarea>
+		</div>
+		
+		<div id="buttons">
+				<button name="jslint" id="jslint">Run JSLint</button>
+				<button name="jslint" id="clear" style="display: none">Clear</button>
+		</div>
+		
+		<div id="output">
+			<div class="errors" style="display: none"></div>
+			<div class="notices" style="display: none"></div>
+		</div>
+		
+		<fieldset id="options">
+			<!--<legend>Options</legend>-->
+			<div>
+				<label><input type="checkbox" id="cse154" checked="checked" /> Assume <a href="http://www.cs.washington.edu/154/">UW CSE 154</a></label><br />
+				<label><input type="checkbox" id="browser" checked="checked" /> Assume a browser</label><br />
+				<label><input type="checkbox" id="dojo" /> Assume <a href="http://dojotoolkit.org/">Dojo Toolkit</a></label><br />
+				<label><input type="checkbox" id="jquery" checked="checked" /> Assume <a href="http://jquery.org/">jQuery</a></label><br />
+				<label><input type="checkbox" id="mootools" /> Assume <a href="http://mootools.net/">MooTools</a></label><br />
+				<label><input type="checkbox" id="nodejs" /> Assume <a href="http://nodejs.org/">Node.js</a></label><br />
+				<label><input type="checkbox" id="prototype" checked="checked" /> Assume <a href="http://prototypejs.org/">Prototype</a>/<a href="http://script.aculo.us/">Scriptaculous</a></label><br />
+				<label><input type="checkbox" id="rhino" /> Assume <a href="http://www.mozilla.org/rhino/">Rhino</a></label><br />
+				<label><input type="checkbox" id="underscore" /> Assume <a href="http://underscorejs.org/">Underscore</a></label><br />
+				<label><input type="checkbox" id="yui" /> Assume <a href="http://yuilibrary.com/">Yahoo! UI</a></label><br />
+					<span style="display: none">
+						<label><input type="checkbox" id="widget" /> Assume a <a href="http://widgets.yahoo.com/gallery/view.php?widget=37484">Yahoo Widget</a></label><br />
+						<label><input type="checkbox" id="sidebar" /> Assume a <a href="http://msdn2.microsoft.com/en-us/library/aa965850(VS.85).aspx">Windows Sidebar Gadget</a></label><br />
+						<label><input type="checkbox" id="adsafe" /> <a href="http://www.ADsafe.org">ADsafe</a></label><br />
+					</span>
+			</div>
+
+			<div>
+				<label><input type="checkbox" id="styledom" checked="checked" /> Check DOM style code</label><br />
+				<label><input type="checkbox" id="fragment" /> Tolerate HTML fragments</label><br />
+				<label><input type="checkbox" id="cap" /> Tolerate HTML case</label><br />
+				<label><input type="checkbox" id="on" checked="checked" /> Tolerate HTML event handlers</label><br />
+				<label><input type="checkbox" id="debug" /> Tolerate debugger statements</label><br />
+				<label><input type="checkbox" id="evil" /> Tolerate <code>eval</code></label><br />
+				<label><input type="checkbox" id="fwddecl" checked="checked" /> Tolerate forward declarations</label><br />
+				<label><input type="checkbox" id="forin" /> Tolerate unfiltered <code>for</code> .. <code>in</code></label><br />
+				<label><input type="checkbox" id="laxbreak" /> Tolerate sloppy line breaking</label><br />
+				<label><input type="checkbox" id="white" /> Strict whitespace</label><br />
+			</div>
+
+			<div>
+				<label><input type="checkbox" id="nomen" /> Disallow leading <code>_</code> in identifiers</label><br />
+				<label><input type="checkbox" id="undef" checked="checked" /> Disallow undefined variables</label><br />
+				<label><input type="checkbox" id="eqeqeq" /> Disallow <code>==</code> and <code>!=</code></label><br />
+				<label><input type="checkbox" id="plusplus" /> Disallow <code>++</code> and <code>--</code></label><br />
+				<label><input type="checkbox" id="bitwise" /> Disallow bitwise operators</label><br />
+				<label><input type="checkbox" id="regexp" /> Disallow <code>.</code> in <code>RegExp</code> literals</label><br />
+				<label><input type="checkbox" id="glovar" /> Disallow global <code>var</code>s</label><br />
+				<label><input type="checkbox" id="usestrict" checked="checked" /> Require <code>"use strict";</code></label><br />
+				<label><input type="checkbox" id="passfail" /> Stop on first error</label><br />
+			</div>
+		</fieldset>
+		
+		<p style="display: none">
+			<input type="button" id="clearall" value="Clear All Options" />
+			&nbsp; &nbsp;
+			<input type="button" id="recommended" value="Recommended Options" />
+			&nbsp; &nbsp;
+			<input type="button" id="goodparts" value="Good Parts" style="display: none" />
+		</p>
+
+		<p>
+			<a href="http://www.jslint.com/lint.html">Original version of JSLint</a> is Copyright &copy; 2002 Douglas Crockford.
+		</p>
+	</body>
+</html>
+
