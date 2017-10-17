@@ -5098,6 +5098,9 @@ klass:                              for (;;) {
                 if (nexttoken.id === 'var') {
                     advance('var');
                     varstatement();
+                } else if (nexttoken.id === "let") {
+                    advance('let');
+                    letstatement();
                 } else {
                     for (;;) {
                         parse(0, 'for');
