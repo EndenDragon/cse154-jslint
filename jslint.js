@@ -4730,10 +4730,11 @@ klass:                              for (;;) {
 
 
     function varstatement(prefix) {
-
 // JavaScript does not have block scope. It only has function scope. So,
 // declaring a variable in a block can have unexpected consequences.
-
+        if (option.cse154) {
+            warning("Var detected! Use the new and shiny let instead.", token);
+        }
         if (funct['(global)'] && option.glovar) {
             warning("Global var. Use /*global */ instead.", token);
         }
@@ -4764,6 +4765,37 @@ klass:                              for (;;) {
 
 
     stmt('var', varstatement);
+    
+    function letstatement(prefix) {
+        if (funct['(global)'] && option.glovar) {
+            warning("Global var. Use /*global */ instead.", token);
+        }
+        for (;;) {
+            nonadjacent(token, nexttoken);
+            addlabel(identifier(), 'unused');
+            if (prefix) {
+                return;
+            }
+            if (nexttoken.id === '=') {
+                nonadjacent(token, nexttoken);
+                advance('=');
+                nonadjacent(token, nexttoken);
+                if (peek(0).id === '=') {
+                    error("Variable {a} was not declared correctly.",
+                            nexttoken, nexttoken.value);
+                }
+                parse(20);
+            }
+            if (nexttoken.id !== ',') {
+                return;
+            }
+            adjacent(token, nexttoken);
+            advance(',');
+            nonadjacent(token, nexttoken);
+        }
+    }
+    
+    stmt('let', letstatement);
 
     stmt('new', function () {
         // *** added by Marty; allows Prototype's Ajax.Request
