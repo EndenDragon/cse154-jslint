@@ -4547,13 +4547,13 @@ klass:                              for (;;) {
 
         if (left && left.value && left.value !== "." && left.value !== "setTimeout" && left.value !== "setInterval"
                 && (!prevtoken || prevtoken.value !== "}")) {
-            if (funct['(inSetTimeout)']) {
+            /*if (funct['(inSetTimeout)']) {
                 // BUGBUG: This does not work properly when the () are used on the
                 // SECOND parameter to setTimeout, which should be allowed but currently isn't
                 // -- Marty
                 warning("Shouldn't write parentheses () or parameters when setting a timer.  To pass a function as a parameter, write just the function's name, " + left.value + ".", left);
                 funct['(inSetTimeout)'] = false;
-            } else if (funct['(inObserve)']) {
+            } else*/ if (funct['(inObserve)']) {
                 if (option.prototype) {
                     warning("Shouldn't write parentheses () or parameters when attaching a Prototype event handler.  To attach a function as an event handler, write just the function's name, " + left.value + ".", left);
                 }
