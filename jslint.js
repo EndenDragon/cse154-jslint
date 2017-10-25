@@ -1247,6 +1247,7 @@ JSLINT = function () {
             "nav-left" : true,
             "nav-right" : true,
             "nav-up" : true,
+            "order" : true,
             "outline-offset" : true,
             "overflow-style" : true,
             "overflow-wrap" : true,
@@ -1518,6 +1519,7 @@ JSLINT = function () {
             navLeft : true,
             navRight : true,
             navUp : true,
+            order : true,
             outlineOffset : true,
             overflowStyle : true,
             overflowWrap : true,
@@ -1789,6 +1791,7 @@ JSLINT = function () {
             navleft : true,
             navright : true,
             navup : true,
+            order : true,
             outlineoffset : true,
             overflowstyle : true,
             overflowwrap : true,
@@ -3178,7 +3181,7 @@ klass:                              for (;;) {
                                     && !__isType(right, "undefined")) {
                                 // special case for opacity
                                 if (__isType(right, "(number)")) {
-                                    if (left && left.value == "." && left.right && (left.right == "opacity" || left.right == "zIndex")) {
+                                    if (left && left.value == "." && left.right && (left.right == "opacity" || left.right == "zIndex" || left.right == "order")) {
                                         // any numbers are ok for opacity or z-index
                                         ;
                                     } else if (right.value !== "0") {
