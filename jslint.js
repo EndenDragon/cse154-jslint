@@ -4765,7 +4765,7 @@ klass:                              for (;;) {
 // JavaScript does not have block scope. It only has function scope. So,
 // declaring a variable in a block can have unexpected consequences.
         if (option.cse154) {
-            warning("Var detected! Use the new and shiny let instead.", token);
+            notice("`var` detected! Use the new and shiny let instead.", false);
         }
         processVariable(prefix);
     }
