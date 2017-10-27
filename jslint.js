@@ -4778,6 +4778,12 @@ klass:                              for (;;) {
     }
     
     stmt('let', letstatement);
+    
+    function conststatement(prefix) {
+        processVariable(prefix);
+    }
+    
+    stmt('const', conststatement);
 
     stmt('new', function () {
         // *** added by Marty; allows Prototype's Ajax.Request
