@@ -401,6 +401,9 @@ JSLINT = function () {
 // web browser environment.
 
         browser = {
+            // CSE154/17au
+            checkStatus          : true,
+            
             // Added by whitaker. Promises are legit, AjaxGetPromise and AjaxPostPromise are CSE154/17sp specific.
             AjaxGetPromise       : true,
             AjaxPostPromise      : true,
@@ -433,6 +436,7 @@ JSLINT = function () {
             Float32Array         : true,
             Float64Array         : true,
             FormData             : true,
+            fetch                : true,
             focus                : true,
             frames               : true,
             getComputedStyle     : true,
